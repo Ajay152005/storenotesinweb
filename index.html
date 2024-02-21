@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="'X-UA-Compatible" content ="IE=edge">
+        <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+        <title>Knowledge Hub</title>
+        <style>
+            body{
+                background: #ffeecc url('') center/cover fixed no-repeat;
+                color: #333;
+                font-family: Arial, sans-serif;
+                margin: 0;
+            }
+            /*Add your CSS styles here */
+            .dijkstra {
+                position: absolute;
+                top:50px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: grey;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .GBFS {
+                position: absolute;
+                top:100px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: grey;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .astar {
+                position: absolute;
+                top:150px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: grey;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .aostar {
+                position: absolute;
+                top:200px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: grey;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .mbs {
+                position: absolute;
+                top:250px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: grey;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .feedback {
+                position: absolute;
+                top: 400px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                font-size: 16px;
+                background-color: rgb(56, 53, 53);
+                color: white;
+                border:none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .h1 {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #2c3e50;
+                text-align: center;
+                padding: 20px;
+                margin: 0;
+            }
+            .buttons  {
+                position: absolute;
+                top: 200px;
+                left: 50%;
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class = h1><h1>Welcome to the Knowledge Hub!</h1></div>
+        
+        <!-- button for a subject -->
+        <div class = buttons>        
+            <button class = "dijkstra"onclick="openPDF('Dijkstra')">Dijkstra</button>
+            <button class = 'GBFS'onclick="openPDF('GBFS')">GBFS</button>
+            <button class= 'astar' onclick="openPDF('Astar')">A*</button>
+            <button class = 'aostar'onclick="openPDF('AOstar')">AO*</button>
+            <button class = 'mbs' onclick="openPDF('MBS')">MBS</button>
+            <!-- Feedback button -->
+            <button class = feedback onclick="openFeedbackForm()">Give feedback</button></div>
+
+        <script> 
+           function openPDF(subject) {
+            window.open(`${subject}.pdf`,'_blank')
+           }
+           function openFeedbackForm(){
+            window.open('https://forms.gle/SaQ2riM33eVFPw9p8','_blank');
+           }</script>
+    </body>
+</html>
